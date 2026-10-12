@@ -1,0 +1,13 @@
+# OCP (Open/Closed Principle)
+
+> A class should be **open for extension but closed for modification.**
+
+This means we should be able to add new functionality without changing existing, tested code.
+
+---
+
+### Example
+
+In a payment system, instead of modifying the existing `PaymentService` whenever a new payment method is added, use a common `Payment` interface and implement it for `UPI`, `Credit Card`, etc.
+
+This allows new payment methods to be added without modifying the existing payment service.
