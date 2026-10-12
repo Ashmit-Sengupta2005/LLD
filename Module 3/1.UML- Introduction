@@ -1,0 +1,23 @@
+## UML (Unified Modeling Language)
+
+**Definition:** UML is a standard visual language used to design, visualize, and document software systems using diagrams.
+It provides a set of graphic notation techniques to create abstract models of systems, covering both static and dynamic aspects.
+
+### Types of UML Diagrams
+
+**1. Structural Diagrams:** Show the static structure of a system, including classes, components, and their relationships.
+
+Examples: Class Diagram, Object Diagram, Component Diagram, Deployment Diagram.
+
+**2. Behavioral Diagrams:** Show how a system behaves and how its components interact over time.
+
+Examples: Use Case Diagram, Activity Diagram, Sequence Diagram, State Machine Diagram.
+
+### UML in LLD
+
+The **Class Diagram** is particularly important in LLD because it shows classes, their attributes, methods, and relationships.
+
+**Benefits:**
+- Makes system design easier to understand.
+- Clarifies relationships between classes.
+- Helps identify design issues before coding.
