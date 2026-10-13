@@ -74,7 +74,7 @@ class BurgerMeal {
 class Main {
     public static void main(String[] args) {
         // Creating burger with only required fields
-        BurgerMeal plainBurger = new BurgerMeal().BurgerBuilder("wheat", "veg")
+        BurgerMeal plainBurger = new BurgerMeal.BurgerBuilder("wheat", "veg")
                 .build();
 
         // Burger with cheese only

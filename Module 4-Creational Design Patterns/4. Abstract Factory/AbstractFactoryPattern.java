@@ -91,7 +91,7 @@ class CheckoutService {
 
     public CheckoutService(RegionFactory factory, String gatewayType) {
         this.gatewayType = gatewayType;
-        this.paymentGateway = factory.createPaymentGateway(gatewayType);
+        this.paymentGateway = factory.createPaymentGateway(this.gatewayType);
         this.invoice = factory.createInvoice();
     }
 
