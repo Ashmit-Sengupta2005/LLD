@@ -39,7 +39,7 @@ class LogisticService {
 
 class Main {
     public static void main(String[] args) {
-        LogisticsService service = new LogisticsService();
+        LogisticService service = new LogisticService();
         service.send("Air");
         service.send("Road");
     }
