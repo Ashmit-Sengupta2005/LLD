@@ -111,7 +111,7 @@ public class Decorator {
     /*
      * Our goals:
      * 1. Plain Pizza + Cheese + Stuffings (pizza 1) cost: 320
-     * 2. Cheese pizza + Cheese + Olives + Stuffings ( pizza 2) cost: 550
+     * 2. Thick pizza + Cheese + Olives + Stuffings ( pizza 2) cost: 550
      */
     public static void main(String args[]) {
         Pizza pizza1 = new PlainPizza();
