@@ -1,0 +1,11 @@
+# Microsoft Office temp / lock files
+~$*
+~WRL*.tmp
+*.tmp
+
+# Java build output
+*.class
+
+# OS junk
+Thumbs.db
+.DS_Store
