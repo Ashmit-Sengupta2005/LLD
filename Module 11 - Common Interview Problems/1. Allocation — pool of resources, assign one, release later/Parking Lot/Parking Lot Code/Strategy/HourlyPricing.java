@@ -7,9 +7,9 @@ import Domain.PricingRule;
 import Domain.Ticket;
 
 public class HourlyPricing implements PricingStrategy {
-    private PricingRule pricingRule;
+    private final PricingRule pricingRule;
 
-    HourlyPricing(PricingRule rule) {
+    public HourlyPricing(PricingRule rule) {
         this.pricingRule = rule;
     }
 

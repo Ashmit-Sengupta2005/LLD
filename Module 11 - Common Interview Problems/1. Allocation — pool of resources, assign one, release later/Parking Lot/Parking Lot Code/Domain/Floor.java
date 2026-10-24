@@ -44,6 +44,15 @@ public class Floor {
         return unoccupied;
     }
 
+    public Optional<ParkingSlot> findFirstFreeSlot(Vehicle vehicle) {
+        for (ParkingSlot slot : parkingSlots) {
+            if (slot.canFit(vehicle)) {
+                return Optional.of(slot);
+            }
+        }
+        return Optional.empty();
+    }
+
     @Override
     public String toString() {
         return "Floor " + floorNo + " (" + getFreeSlots() + "/" + getTotalSlots() + " free)";
