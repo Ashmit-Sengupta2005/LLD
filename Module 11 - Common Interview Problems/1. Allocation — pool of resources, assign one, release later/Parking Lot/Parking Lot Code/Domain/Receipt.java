@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.*;
 import Enum.PaymentStatus;
-import Enum.PaymentGateway;
+import Enum.Gateway;
 
 public class Receipt {
     private final UUID receiptId;
@@ -12,10 +12,10 @@ public class Receipt {
     private final Instant exitTime;
     private final long amountInPaise;
     private final PaymentStatus paymentStatus;
-    private final PaymentGateway paymentGateway;
+    private final Gateway paymentGateway;
 
     public Receipt(Ticket ticket, Instant exitTime, long amountInPaise,
-                   PaymentStatus paymentStatus, PaymentGateway paymentGateway) {
+                   PaymentStatus paymentStatus, Gateway paymentGateway) {
         this.receiptId = UUID.randomUUID();
         this.ticket = ticket;
         this.exitTime = exitTime;
@@ -49,7 +49,7 @@ public class Receipt {
         return this.paymentStatus;
     }
 
-    public PaymentGateway getPaymentGateway() {
+    public Gateway getPaymentGateway() {
         return this.paymentGateway;
     }
 

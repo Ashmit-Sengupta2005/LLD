@@ -1,5 +1,5 @@
 package Enum;
 
-public enum PaymentGateway {
+public enum Gateway {
     RAZORPAY, STRIPE, PAYPAL, PAYU
 }
