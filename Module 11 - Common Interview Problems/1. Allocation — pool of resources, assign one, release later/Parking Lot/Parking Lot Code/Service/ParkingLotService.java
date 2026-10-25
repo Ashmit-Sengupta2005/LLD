@@ -17,6 +17,7 @@ import Domain.Vehicle;
 import Enum.Gateway;
 import Enum.PaymentStatus;
 import Enum.RuleType;
+import Enum.SlotType;
 import Factory.PaymentFactory;
 import Factory.PricingStrategyFactory;
 import Repository.PricingRuleRepository;
@@ -47,6 +48,16 @@ public class ParkingLotService {
     // ---- setup, called from Main / AdminController ----
     public void addFloor(Floor floor) {
         floors.add(floor);
+    }
+
+    public void addSlotToFloor(int floorNo, SlotType slotType, String label) {
+        for (Floor floor : floors) {
+            if (floor.getFloorNo() == floorNo) {
+                floor.addSlot(new ParkingSlot(slotType, floorNo, label));
+                return;
+            }
+        }
+        throw new IllegalArgumentException("No such floor: " + floorNo);
     }
 
     public void setAllocationStrategy(SeatAllocationStrategy strategy) {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import Domain.Floor;
 import Domain.PricingRule;
-import Enum.RuleType;
+import Enum.SlotType;
 import Enum.VehicleType;
 import Service.ParkingLotService;
 import Strategy.SeatAllocationStrategy;
@@ -18,6 +18,16 @@ public class AdminController {
 
     public void addFloor(int floorNo) {
         lot.addFloor(new Floor(floorNo));
+    }
+
+    public void addSlot(int floorNo, SlotType slotType, String label) {
+        lot.addSlotToFloor(floorNo, slotType, label);
+    }
+
+    public void addSlots(int floorNo, SlotType slotType, int count) {
+        for (int i = 1; i <= count; i++) {
+            lot.addSlotToFloor(floorNo, slotType, "F" + floorNo + "-" + slotType + "-" + i);
+        }
     }
 
     public void setAllocationStrategy(SeatAllocationStrategy strategy) {
